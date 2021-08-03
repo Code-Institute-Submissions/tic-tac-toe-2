@@ -23,6 +23,7 @@ def printBoard(board):
     
 # main function witch has the gameplay.
 
+
 def game():
 
     turn = 'X'
@@ -43,7 +44,7 @@ def game():
             continue
         """
         checks if player X or O has won,for every move after 5 moves.
-        checks row for row.
+        checks row for row. verticaly and horizontaly 
         """ 
         
         # Checks top row horizontal
@@ -95,9 +96,29 @@ def game():
                 print("\nGame Over.\n")                
                 print(" **** " + turn + " won. ****")
                 break
-        # checks diagonally other way    
+        # checks other diagonal   
             elif gamearea['1'] == gamearea['5'] == gamearea['9'] != ' ':
                 printBoard(gamearea)
                 print("\nGame Over.\n")                
                 print(" **** " + turn + " won. ****")
-                break 
+                break
+    # Checks for a tie
+        if count == 9:
+            print("\nGame Over.\n")                
+            print("Tie")
+    # Changes player after every move.   
+        if turn =='X':
+            turn = 'O'
+        else:
+            turn = 'X'
+# After game over asks if players wants to play again or quit.
+    restart = input("Another round?(y/n)")
+    if restart == "y" or restart == "Y":  
+        for key in gamearea_keys:
+            gamearea[key] = " "
+            
+        game()
+
+
+if __name__ == "__main__":
+    game()
