@@ -11,7 +11,7 @@ for key in gamearea:
     
 ''' 
 function that prints the updated board after every move.
- '''
+'''
  
  
 def printBoard(board):
@@ -22,7 +22,6 @@ def printBoard(board):
     print(board['1'] + '|' + board['2'] + '|' + board['3'])
     
 # main function witch has the gameplay.
-
 
 def game():
 
@@ -72,3 +71,33 @@ def game():
                 print("\nGame Over.\n")                
                 print(" **** " + turn + " won. ****")
                 break
+        # Checks left row verticaly    
+            elif gamearea['1'] == gamearea['4'] == gamearea['7'] != ' ': 
+                printBoard(gamearea)
+                print("\nGame Over.\n")                
+                print(" **** " + turn + " won. ****")
+                break
+        # checks middle row verticaly    
+            elif gamearea['2'] == gamearea['5'] == gamearea['8'] != ' ': 
+                printBoard(gamearea)
+                print("\nGame Over.\n")                
+                print(" **** " + turn + " won. ****")
+                break
+        # checks right row verticaly    
+            elif gamearea['3'] == gamearea['6'] == gamearea['9'] != ' ': 
+                printBoard(gamearea)
+                print("\nGame Over.\n")                
+                print(" **** " + turn + " won. ****")
+                break 
+        # Checks diagonally    
+            elif gamearea['7'] == gamearea['5'] == gamearea['3'] != ' ': 
+                printBoard(gamearea)
+                print("\nGame Over.\n")                
+                print(" **** " + turn + " won. ****")
+                break
+        # checks diagonally other way    
+            elif gamearea['1'] == gamearea['5'] == gamearea['9'] != ' ':
+                printBoard(gamearea)
+                print("\nGame Over.\n")                
+                print(" **** " + turn + " won. ****")
+                break 
