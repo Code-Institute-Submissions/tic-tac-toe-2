@@ -38,7 +38,7 @@ def game():
         if gamearea[move] == ' ':
             gamearea[move] = turn
             count += 1
-            
+    # Checks if player choose allready occupied space        
         else:
             print("Space allready occupied .\nChoose new move!")
             continue
@@ -106,6 +106,7 @@ def game():
         if count == 9:
             print("\nGame Over.\n")                
             print("Tie")
+            break
     # Changes player after every move.   
         if turn =='X':
             turn = 'O'
