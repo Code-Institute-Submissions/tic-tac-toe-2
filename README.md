@@ -4,6 +4,8 @@
 
 [GitHub Repo](https://github.com/ejkington/tic-tac-toe)
 
+# Data used 
+i used dictionaries in python,access dictionaries, iterate over dictionaries, for loop, if-else conditions and functions
 
 # Python terminal game of tic tac toe.
 
